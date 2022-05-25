@@ -119,7 +119,7 @@ SELECT usuario.id, email
 
 --Listar todos los post con sus comentarios (incluyendo aquellos que no poseen comentarios.
 
-SELECT *
+SELECT titulo, comentario.texto
     FROM post
     FULL OUTER JOIN comentario
     ON post.usuario_id=comentario.usuario_id;
@@ -127,5 +127,4 @@ SELECT *
 --Listar todos los usuarios que hayan publicado un post en Junio.
 
 SELECT usuario_id
- FROM post 
- WHERE FECHA BETWEEN '2020-06-01' AND '2020-06-30';
+ FROM post WHERE FECHA BETWEEN '2020-06-01' AND '2020-06-30';
