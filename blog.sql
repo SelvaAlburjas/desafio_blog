@@ -119,10 +119,10 @@ SELECT usuario.id, email
 
 --Listar todos los post con sus comentarios (incluyendo aquellos que no poseen comentarios.
 
-SELECT titulo, comentario.texto
+SELECT *
     FROM post
     FULL OUTER JOIN comentario
-    ON post.usuario_id=comentario.usuario_id;
+    ON post.id=comentario.post_id;
 
 --Listar todos los usuarios que hayan publicado un post en Junio.
 
