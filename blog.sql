@@ -125,6 +125,8 @@ SELECT *
     ON post.id=comentario.post_id;
 
 --Listar todos los usuarios que hayan publicado un post en Junio.
-
+--Idea inicial
 SELECT usuario_id
- FROM post WHERE FECHA BETWEEN '2020-06-01' AND '2020-06-30';
+FROM post WHERE FECHA BETWEEN '2020-06-01' AND '2020-06-30';
+-- query envido por César
+SELECT * FROM usuario LEFT JOIN post ON usuario.id = post.usuario_id WHERE EXTRACT(month FROM post.fecha) = 6 ORDER BY usuario.id;
